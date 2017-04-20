@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+  -->
+  <html>
+  <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+              -->
+
+              <meta name="format-detection" content="telephone=no">
+              <meta name="msapplication-tap-highlight" content="no">
+              <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+              <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+              <link rel="stylesheet" type="text/css" href="css/icon.css">
+              <link rel="stylesheet" type="text/css" href="css/app.css">
+
+              <script type="text/javascript" src="js/jquery.js"></script>
+            </head>
+            <body>
+              <header>
+                <div class="container"> 
+                  <div class="col s12 menu-icon">
+                    <button><img src="img/menu-icon.png"></button>
+                  </div>
+                </div>
+              </header>
+
+              <div class="container index-container">
+                <div class="row org-address-row">
+                  <div class="col s12 col m12 organization-address">
+                    <span id="deparment">Dept of Youth Services & Sports H.P</span>
+                    <i onclick="app.editHeading();" class="material-icons">create</i>
+                  </div>
+                  <div class="col s12 m12 organization-address">
+                    <span id="sec-department">Indoor Stadium Dharamshala </span>
+                    <i onclick="app.editTitle();" class="material-icons">create</i>
+                  </div>
+                  <div id="third-deparment" class="col s12 m12 organization-address">
+                    <span id="cardType">Identity card</span>
+                    <i onclick="app.cardType();" class="material-icons">create</i>
+                  </div>
+                  <div class="col s12 m12 organization-icon">
+                    <input id="edit_logo" class="editLogo" accept="image/*" type="file" onchange="app.readURLForEditLogo(this);">
+                    <div class="col s7 logo-row">
+                      <img id="logo_edit" src="img/gai_logo.png">
+                    </div>
+                    <div class="col s5 logo-label">
+                      <label for="edit_logo" class="edit_logo_label"><i class="material-icons">create</i></label>
+                    </div>
+                  </div>
+                </div>
+                <form id="clubcardForm" action="card.html">
+                 <div class="row input-section">
+                  <div class="col s12 form-fields">
+                    <div class="sol s12">
+                     <label id="nameLabel">Name</label>
+                     <i onclick="app.editName();" class="material-icons">create</i>
+                     <input type="text" id="userName" />   
+                   </div>
+                   <div class="col s12">
+                    <label id="dateOfBirt">Date Of Birth</label>
+                    <i onclick="app.editDOB();" class="material-icons">create</i>
+                    <input type="text" id="dob">
+                  </div>
+                  <div class="col s12">
+                    <label id="residence_field">Address</label>
+                    <i onclick="app.editAddress()" class="material-icons">create</i>
+                    <input id="address" type="text" class="validate">
+                  </div>
+                  <div>
+                    <label id="multiple">Student/Non Student</label>
+                    <i onclick="app.editMultiple();" class="material-icons">create</i>
+                    <input id="student_Non" type="text" class="validate">
+                  </div>
+                  <div>
+                    <label id="addGame">Game</label>
+                    <i onclick="app.editGame();" class="material-icons">create</i>
+                    <input id="game" type="text" class="validate">
+                  </div>
+                  <div>
+                    <label id="editPhone">Mob/Phone</label>
+                    <i onclick="app.editContact();" class="material-icons">create</i>
+                    <input id="number" type="text" class="validate">
+                  </div>
+                  <div>
+                    <label id="Timing_field">Timing</label>
+                    <i onclick="app.editTime();" class="material-icons">create</i>
+                    <input id="time" type="text" class="validate">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s6 upload-image">
+                    <input id="upload-file" class="upload_image" accept="image/*" onchange="app.readURLForProfile(this);" type="file">
+                    <label for="upload-file" class="custom-file-upload">Upload Image ...</label>
+                  </div>
+                  <div class="col s6 upload-icon">
+                   <img id="blah" src="img/uploadimage.png" class="upload_file" alt="your image">
+                 </div>
+               </div>
+             </div>
+           
+           
+           <div class="row"> 
+            <div class="col s12 Submit-button">
+              <button onclick="return app.getvalues();" type="submit">Generate Card</button>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+         <script type="text/javascript" src="js/filesystem.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+      </body>
+      </html>

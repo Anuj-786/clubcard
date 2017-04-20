@@ -1,0 +1,133 @@
+body {
+
+}
+/*css for header*/
+header {
+	background-color: #EE6E73;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+.menu-icon button {
+	background: none; 
+	border: none;
+}
+
+/*css for index page*/
+.index-container {
+	z-index: 999;
+	margin-top: 62px;
+}
+.org-address-row {
+	margin-bottom: 0px ;
+}
+.organization-address {
+	margin-top: 20px;
+	text-align: center;
+	background-color: #EE6E73;
+	
+}
+.organization-address span {
+	color: #ffffff;
+	font-size: 18px;
+}
+.organization-address i {
+	color: #ffffff;
+}
+.organization-icon {
+	text-align: center;
+	margin-top: 10px;
+}
+.organization-icon img {
+	height: 60px;
+	width: 60px;
+	border-radius: 30px;
+}
+.form-fields {
+	margin-top: 0px;
+}
+.form-fields  label {
+	top: 0px;
+	color: #000000;
+}
+.form-fields i {
+	float: right;
+}
+.form-fields input {
+	height: 20px !important;
+	text-align: center;
+	font-size: 18px;
+}
+.form-fields div {
+	padding: 0px !important;
+}
+.input-section {
+	margin-bottom: 0px;
+}
+.upload_image {
+	display: none;
+}
+.custom-file-upload {
+	color: #000000;
+	margin-left: 25px;
+	font-size: 15px;
+	border: 1px solid;
+	border-radius: 25px;
+	padding: 6px 12px;
+}
+.upload-image {
+	margin-top: 15px;
+}
+.upload-icon i{
+	font-size: 50px;
+}
+.Submit-button button {
+	width: 100%;
+	background: #EE6E73;
+	color: #ffffff;
+	font-size: 20px;
+	border-radius: 18px;
+	padding: 5px;
+}
+.editLogo {
+	display: none;
+}
+.organization-icon i {
+	color: #000000;
+}
+.logo-row {
+	text-align: right;
+}
+.logo-label {
+	text-align: left;
+	margin-top: 10px;
+}
+.upload_file {
+	height: 60px;
+	width: 60px;
+	border-radius: 25px;
+}
+/*css for card page */
+.user_profile_image img {
+	height: 60px;
+	width: 60px;
+}
+.head3 i {
+	display: none;
+}
+.cardtype  {
+	margin-top: 15px;
+}
+.cardtype span {
+	font-size: 18px;
+	text-decoration: underline;
+}
+.card-logo {
+	margin-top: 15px
+}
+.card-logo img {
+	width: 50px;
+	height: 50px;
+}
+
+/*css for footer*/

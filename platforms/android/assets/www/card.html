@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>Card </title>
+     <meta name="format-detection" content="telephone=no">
+     <meta name="msapplication-tap-highlight" content="no">
+     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+     <link rel="stylesheet" type="text/css" href="css/app.css">
+     <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+</head>    
+<body onload="app.init()";>
+    <div class="container card-container">
+        <div class="row">
+            <div class="col s12 col m12 organization-address">
+                <span id="organiztion" class="head1"></span>
+            </div>
+            <div class="col s12 col m12 organization-address">
+             <span id="print-title" class="head2"></span>
+         </div>
+         <div class="col s12 col m12 ">
+             <div class="col s4 col m4 card-logo" id="logo">
+
+             </div>
+             <div class="col s8 col m8 cardtype">
+                 <span id="print-card" class="head3"></span>
+             </div>
+         </div>
+     </div>
+     <div class="row">
+         <div class="col s12 col m12">
+             <div class="col s3 col m3 user_profile_image" id="image">
+             </div>
+             <div class="col s9 col m9">
+                <span id="getlabel"></span>
+                <span id="username"></span><br />
+                <span id="get_dob"></span>
+                <span id="DOB"></span><br />
+                <span id="get_residence"></span>
+                <span id="Adress"></span><br />
+                <span id="get_multiple"></span>
+                <span id="Student_Nom"></span><br />
+                <span id="getGame"></span>
+                <span id="game"></span><br />
+                <span id="get_contact"></span>
+                <span id="number"></span><br />
+                <span id="get_time"></span>
+                <span id="time"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<button onclick="app.generateCanvasImage()">Create Card Image</button>
+<div id="canvas"></div>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="js/filesystem.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/html2canvas.js"></script>
+
+
+</body>
+
+</html>
